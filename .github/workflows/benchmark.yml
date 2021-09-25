@@ -1,0 +1,28 @@
+name: Benchmark
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  benchmark:
+    name: Run benchmark
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: sersoft-gmbh/swifty-linux-action@v1
+        with:
+          release-version: '5.5'
+      - name: Run benchmark
+        run: cd Benchmarks && make unit_bench
+      - name: Store benchmark result
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: ChibiSAT Benchmark
+          tool: 'googlecpp'
+          output-file-path: Benchmarks/benchmark_result.json
+          skip-fetch-gh-pages: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
