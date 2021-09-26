@@ -8,6 +8,8 @@ build/picosat/picosat:
 		make picosat)
 
 unit_bench:
-	swift run -c release ChibiSATBenchmark --format json --iterations 2 | tee benchmark_result.json
+	swift run -c release ChibiSATBenchmark --format json --iterations 2 --time-unit ms \
+		| jq '.benchmarks | map(. + {"real_time": .time, "time_unit": "ms"}) | { "benchmarks": . }' \
+		| tee benchmark_result.json
 
 .PHONY: unit_bench
