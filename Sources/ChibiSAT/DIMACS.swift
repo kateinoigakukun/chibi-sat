@@ -16,7 +16,7 @@ public struct DIMACS<LineSource> where LineSource: IteratorProtocol,
     
     public mutating func nextCNF() throws -> CNF? {
         var numberOf: (variables: Int, clauses: Int)?
-        var clauses: Set<Clause> = []
+        var clauses: [Clause] = []
 
         while let line = self.source.next() {
             let components = line.split(whereSeparator: \.isWhitespace)
@@ -44,7 +44,7 @@ public struct DIMACS<LineSource> where LineSource: IteratorProtocol,
                     guard n != 0 else { break }
                     vars.insert(Literal(number: abs(n), isNegative: n < 0))
                 }
-                clauses.insert(vars)
+                clauses.append(vars)
                 guard let numberOfClauses = numberOf?.clauses else {
                     throw Error.unexpectedClauseLine(String(line))
                 }
