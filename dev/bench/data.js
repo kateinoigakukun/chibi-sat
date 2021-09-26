@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632655764657,
+  "lastUpdate": 1632656584856,
   "repoUrl": "https://github.com/kateinoigakukun/chibi-sat",
   "entries": {
     "ChibiSAT Benchmark": [
@@ -1316,6 +1316,198 @@ window.BENCHMARK_DATA = {
             "value": 1.190715,
             "unit": "ms/iter",
             "extra": "iterations: 1139\ncpu: undefined ms\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kateinoigakukun@gmail.com",
+            "name": "Yuta Saito",
+            "username": "kateinoigakukun"
+          },
+          "committer": {
+            "email": "kateinoigakukun@gmail.com",
+            "name": "Yuta Saito",
+            "username": "kateinoigakukun"
+          },
+          "distinct": true,
+          "id": "13979f30824934078c606bf61012fe83cc52241e",
+          "message": "fix: fix literal number to be 1-indexed",
+          "timestamp": "2021-09-26T20:39:25+09:00",
+          "tree_id": "da955fd1ab29c043caca20efc0c39694b1af0977",
+          "url": "https://github.com/kateinoigakukun/chibi-sat/commit/13979f30824934078c606bf61012fe83cc52241e"
+        },
+        "date": 1632656584840,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "small-cnf-2.cnf",
+            "value": 0.143201,
+            "unit": "ms/iter",
+            "extra": "iterations: 9729\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-3.cnf",
+            "value": 0.0315,
+            "unit": "ms/iter",
+            "extra": "iterations: 44296\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-4.cnf",
+            "value": 0.232902,
+            "unit": "ms/iter",
+            "extra": "iterations: 5991\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-5.cnf",
+            "value": 0.261602,
+            "unit": "ms/iter",
+            "extra": "iterations: 5309\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-6.cnf",
+            "value": 0.532304,
+            "unit": "ms/iter",
+            "extra": "iterations: 2623\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-7.cnf",
+            "value": 0.365003,
+            "unit": "ms/iter",
+            "extra": "iterations: 3825\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-8.cnf",
+            "value": 0.198702,
+            "unit": "ms/iter",
+            "extra": "iterations: 7016\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-9.cnf",
+            "value": 0.317702,
+            "unit": "ms/iter",
+            "extra": "iterations: 4401\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-10.cnf",
+            "value": 0.0921,
+            "unit": "ms/iter",
+            "extra": "iterations: 15193\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-11.cnf",
+            "value": 0.406802,
+            "unit": "ms/iter",
+            "extra": "iterations: 3417\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-12.cnf",
+            "value": 0.0981,
+            "unit": "ms/iter",
+            "extra": "iterations: 14229\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-13.cnf",
+            "value": 0.967006,
+            "unit": "ms/iter",
+            "extra": "iterations: 1443\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-14.cnf",
+            "value": 0.115301,
+            "unit": "ms/iter",
+            "extra": "iterations: 12097\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-15.cnf",
+            "value": 0.151901,
+            "unit": "ms/iter",
+            "extra": "iterations: 9183\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-16.cnf",
+            "value": 0.0321,
+            "unit": "ms/iter",
+            "extra": "iterations: 43337\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-17.cnf",
+            "value": 1.216108,
+            "unit": "ms/iter",
+            "extra": "iterations: 1145\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-18.cnf",
+            "value": 1.167008,
+            "unit": "ms/iter",
+            "extra": "iterations: 1203\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-19.cnf",
+            "value": 0.173901,
+            "unit": "ms/iter",
+            "extra": "iterations: 8019\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-20.cnf",
+            "value": 1.240708,
+            "unit": "ms/iter",
+            "extra": "iterations: 1121\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-21.cnf",
+            "value": 1.004806,
+            "unit": "ms/iter",
+            "extra": "iterations: 1382\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-22.cnf",
+            "value": 0.433503,
+            "unit": "ms/iter",
+            "extra": "iterations: 3221\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-23.cnf",
+            "value": 0.326202,
+            "unit": "ms/iter",
+            "extra": "iterations: 4287\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-24.cnf",
+            "value": 0.865405,
+            "unit": "ms/iter",
+            "extra": "iterations: 1614\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-25.cnf",
+            "value": 1.668511,
+            "unit": "ms/iter",
+            "extra": "iterations: 836\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-26.cnf",
+            "value": 1.211107,
+            "unit": "ms/iter",
+            "extra": "iterations: 1153\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-27.cnf",
+            "value": 0.607704,
+            "unit": "ms/iter",
+            "extra": "iterations: 2305\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-28.cnf",
+            "value": 1.484609,
+            "unit": "ms/iter",
+            "extra": "iterations: 937\ncpu: undefined ms\nthreads: undefined"
+          },
+          {
+            "name": "small-cnf-29.cnf",
+            "value": 0.9957065,
+            "unit": "ms/iter",
+            "extra": "iterations: 1408\ncpu: undefined ms\nthreads: undefined"
           }
         ]
       }
