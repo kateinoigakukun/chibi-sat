@@ -1,5 +1,5 @@
 
-struct Literal: Hashable {
+public struct Literal: Hashable {
     var number: Int
     var isNegative: Bool
 
@@ -13,7 +13,7 @@ struct Literal: Hashable {
     }
 }
 
-typealias Clause = Set<Literal>
+public typealias Clause = Set<Literal>
 
 fileprivate extension Clause {
     func eval(solution: [Bool]) -> Bool {
@@ -27,7 +27,12 @@ fileprivate extension Clause {
 
 public struct CNF {
     var clauses: [Clause]
-    let numberOfVariables: Int
+    var numberOfVariables: Int
+
+    public init(clauses: [Clause], numberOfVariables: Int) {
+        self.clauses = clauses
+        self.numberOfVariables = numberOfVariables
+    }
 
     func eval(solution: [Bool]) -> Bool {
         self.clauses.reduce(true) { $0 && $1.eval(solution: solution) }
@@ -55,5 +60,17 @@ public struct CNF {
 extension CNF: CustomStringConvertible {
     public var description: String {
         self.clauses.map { "(" + $0.stringExpression + ")" }.joined(separator: " and ")
+    }
+}
+
+extension CNF {
+
+    public mutating func newVariable() -> Literal {
+        defer { numberOfVariables += 1 }
+        return Literal(number: numberOfVariables, isNegative: false)
+    }
+
+    public mutating func addClause(_ clause: Clause) {
+        clauses.append(clause)
     }
 }
