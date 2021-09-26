@@ -66,7 +66,7 @@ extension CNF: CustomStringConvertible {
 extension CNF {
 
     public mutating func newVariable() -> Literal {
-        defer { numberOfVariables += 1 }
+        numberOfVariables += 1
         return Literal(number: numberOfVariables, isNegative: false)
     }
 
