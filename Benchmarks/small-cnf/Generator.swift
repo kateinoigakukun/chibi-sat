@@ -12,7 +12,7 @@ func generateCNF(numberOf: (variables: Int, clauses: Int)) -> [[Int]] {
 func generateDIMACS(numberOfVariables: Int) -> String {
     let numberOf = (
         variables: numberOfVariables,
-        clauses: 25
+        clauses: Int.random(in: 0..<50)
     )
     let cnf = generateCNF(numberOf: numberOf)
 
@@ -22,7 +22,7 @@ p cnf \(numberOf.variables) \(numberOf.clauses)
 """
 }
 
-for i in 2..<30 {
+for i in 2..<50 {
     let content = generateDIMACS(numberOfVariables: i)
     try content.write(toFile: "small-cnf-\(i).cnf", atomically: true, encoding: .utf8)
 }
