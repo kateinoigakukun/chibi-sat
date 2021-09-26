@@ -1,9 +1,9 @@
 
 public struct Literal: Hashable {
-    var number: Int
-    var isNegative: Bool
+    public var number: Int
+    public var isNegative: Bool
 
-    var inverse: Literal {
+    public var inverse: Literal {
         Literal(number: number, isNegative: !isNegative)
     }
 
